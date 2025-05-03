@@ -1,0 +1,275 @@
+.home-container {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 40px;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.home-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.home-header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #a26c08d6;
+  margin: 0;
+}
+
+.underline {
+  width: 61px;
+  height: 6px;
+  background: #a26c08d6;
+  border-radius: 9px;
+  margin-bottom: 30px;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 55px;
+}
+
+.food-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s;
+  border: 1px solid #eaeaea;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  border-color: #a26c08d6;
+}
+
+.food-info h3 {
+  margin-top: 0;
+  color: #5a4a42;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 8px;
+}
+
+.food-price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #a26c08d6;
+  margin: 10px 0;
+}
+
+.food-stock {
+  color: #797979;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.add-to-cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background: #a26c08d6;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.add-to-cart-btn:hover {
+  background: #8a5c07;
+  transform: scale(1.02);
+}
+
+.cart-sidebar {
+  background: #fff;
+  border-left: 3px solid #a26c08d6;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100vh;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  z-index: 100;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.cart-sidebar.open {
+  transform: translateX(0);
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.cart-header h2 {
+  color: #a26c08d6;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.cart-item {
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px;
+  border: 1px solid #eaeaea;
+}
+
+.item-total {
+  color: #a26c08d6;
+  font-weight: bold;
+}
+
+.vip-membership {
+  background: #fff8e8;
+  border: 2px dashed #a26c08d6;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.donation-section {
+  background: #f9f5f0;
+  border: 2px dashed #a26c08d6;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.donation-option.selected {
+  background: #a26c08d6;
+  color: white;
+}
+
+.checkout-btn {
+  background: #a26c08d6;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.checkout-btn:hover {
+  background: #8a5c07;
+}
+
+.logout-btn {
+  background: #a26c08d6;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+  background: #8a5c07;
+}
+
+.cart-btn {
+  color: #a26c08d6;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.payment-form input {
+  border: 1px solid #eaeaea;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.payment-form input:focus {
+  border-color: #a26c08d6;
+  outline: none;
+}
+
+.submit-container {
+  display: flex;
+  gap: 30px;
+  margin: 30px auto;
+  justify-content: center;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 59px;
+  color: #fff;
+  background: #a26c08d6;
+  border-radius: 50px;
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.submit:hover {
+  background: #8a5c07;
+}
+
+.gray {
+  background: #eaeaea;
+  color: #676767;
+}
+
+.gray:hover {
+  background: #d0d0d0;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    margin-top: 20px;
+    padding: 15px;
+  }
+  
+  .food-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .submit-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .cart-sidebar {
+    width: 100%;
+  }
+}
