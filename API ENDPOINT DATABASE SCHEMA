@@ -1,0 +1,62 @@
+POST/user register- new user add.
+POST/user login   - authorize user.
+Get/user me       - current user profile.
+Put/user me       - current user profile update.
+Delete/user me    - delete user account.
+
+Get/ products     - list all products.
+Post/ products    - list new product(admin only).
+Get/ product id   - product detail.
+Put/ product id   - product detail update(admin only).
+Detele/ product   - product detele(admin only).
+
+Get/order         - list order.
+Post/order        - Creat new order.
+Get/order id      - list order detail.
+Put/order id      - order detail change.
+Delete/order id   - order detele/cancel.
+
+
+CREATE TABLE users (
+  id,
+  email,
+  password,
+  first_name,
+  last_name,
+  phone,
+  role(role IN ('admin', 'staff', 'volunteer', 'recipient')),
+  household_size,
+  eligibility_status,
+  address,
+);
+
+CREATE TABLE inventory (
+  id,
+  name,
+  category(category IN ('produce', 'dairy', 'meat', 'dry goods', 'bakery', 'frozen')),
+  quantity,
+  unit,
+  expiry_date DATE,
+  donation_source,
+  storage_location,
+  notes,
+);
+
+CREATE TABLE donations (
+  id,
+  donor_name,
+  donor_type('individual', 'business', 'organization')),
+  donation_date ,
+  estimated_value,
+  notes,
+  processed_by INTEGER REFERENCES users(id),
+);
+
+CREATE TABLE donation_items (
+  id,
+  donation_id INTEGER REFERENCES users(id),
+  inventory_id INTEGER REFERENCES inventory(id),
+  quantity ,
+  description,
+  category,
+);
